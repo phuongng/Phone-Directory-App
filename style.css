@@ -121,6 +121,16 @@ input {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* -----search section */
+
+.searchText {
+  text-align: center;
+  font-weight: 600;
+}
+
+#mySearchInput {
+  display: inline;
+}
 /* ----------table list */
 
 .table {
@@ -132,6 +142,7 @@ input {
 
 .table th {
   outline: 1px solid rgba(74, 177, 255, 0.5);
+  border-radius: 0.5rem;
   font-size: 2rem;
   font-weight: bold;
   color: white;
@@ -140,6 +151,7 @@ input {
 
 .table td {
   outline: 1px solid rgba(74, 177, 255, 0.5);
+  border-radius: 0.3rem;
   font-size: 1.3rem;
   padding: 0.5rem 0;
   color: rgb(47, 118, 197);
@@ -150,7 +162,7 @@ tbody tr:nth-child(even) {
   background: #fff;
 }
 tbody tr:nth-child(odd) {
-  background: #f2f2f2;
+  background: #cacaca;
 }
 
 /* .delete {
