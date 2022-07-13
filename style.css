@@ -33,7 +33,8 @@ h1 {
   padding: 1rem;
   border-radius: 0.5rem;
 }
-#error {
+#error,
+#NoSearchFound {
   margin: 1rem 0;
   margin-left: 50%;
   transform: translateX(-50%);

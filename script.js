@@ -128,6 +128,7 @@ function searchFunction() {
 				tr[i].style.display = "";
 			} else {
 				tr[i].style.display = "none";
+				document.querySelector("#NoSearchFound").textContent = "No Results Found";
 			}
 		}
 	}
