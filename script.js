@@ -1,5 +1,5 @@
 //Showing and Hidding contents
-const btn = document.querySelector(".btnNav");
+const btn = document.querySelector(".header");
 btn.addEventListener('click', function (e) {
 	e.preventDefault();
 	const data = document.querySelector(".showEntry");
@@ -36,23 +36,23 @@ if (frm != null) {
 			const nameEl = document.createElement('td');
 			const phoneEl = document.createElement('td');
 			const emailEl = document.createElement('td');
-			const delEl = document.createElement('td');
+			// const delEl = document.createElement('td');
 			const el = document.createElement('tr');
 
 			//Adding content
 			nameEl.textContent = name.value;
 			phoneEl.textContent = number.value;
 			emailEl.textContent = email.value;
-			delEl.textContent = "X";
+			// delEl.textContent = "X";
 
 			//Adding Classes
-			delEl.classList.add('delete');
+			// delEl.classList.add('delete');
 
 			//Adding to table
 			el.appendChild(nameEl);
 			el.appendChild(phoneEl);
 			el.appendChild(emailEl);
-			el.appendChild(delEl);
+			// el.appendChild(delEl);
 			list.appendChild(el);
 
 			//

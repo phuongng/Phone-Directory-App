@@ -2,11 +2,6 @@
 <html>
   <head>
     <title>Phone Directory</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Acme|Amatic+SC"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/gif" href="Images/phoneIcon.png" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
@@ -16,115 +11,114 @@
     />
   </head>
   <body>
-    <div class="header">Phone Directory <i class="fas fa-phone"></i></div>
-
     <div class="container">
-      <!-- <a href="#"><button class="btn cent btnNav">Add A New Entry</button></a> -->
+      <!-- header -->
+      <button class="header">
+        Phone Directory
+        <i class="fas fa-phone"></i>
+      </button>
 
-      <button class="btn cent btnNav hidden"></button>
-
-      <hr style="margin-top: 15px" />
+      <hr />
 
       <!--Form To Add Users-->
-      <div class="addEntry">
-        <form class="entry-form" method="post" id="entForm">
-          <div class="formg">
-            Contact Name :
+      <main>
+        <div class="addEntry">
+          <form class="entry-form" method="post" id="entForm">
+            <div class="formDIV">
+              Contact Name :
+              <input
+                class="form-input"
+                type="text"
+                name="Name"
+                id="name"
+                placeholder="Name"
+                pattern="[A-Za-z\s]{1,15}"
+              />
+            </div>
+
+            <div class="formDIV">
+              Mobile Number :
+              <input
+                class="form-input"
+                type="tel"
+                name="Number"
+                id="number"
+                placeholder="Phone Number"
+                pattern="[0-9]{10}"
+              />
+            </div>
+
+            <div class="formDIV">
+              Email :
+              <input
+                class="form-input"
+                type="email"
+                name="Email"
+                id="email"
+                placeholder="Email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}${0,40}"
+              />
+            </div>
+
             <input
-              class="form-el"
-              type="text"
-              name="Name"
-              id="name"
-              placeholder="Name"
-              pattern="[A-Za-z\s]{1,15}"
+              type="submit"
+              class="submit-btn"
+              name="submit"
+              id="submit"
+              value="Add Contact"
             />
-          </div>
+          </form>
 
-          <div class="formg">
-            Mobile Number :
-            <input
-              class="form-el"
-              type="tel"
-              name="Number"
-              id="number"
-              placeholder="Phone Number"
-              pattern="[0-9]{10}"
-            />
-          </div>
+          <p class="alert"></p>
+        </div>
 
-          <div class="formg">
-            Email :
-            <input
-              class="form-el"
-              type="email"
-              name="Email"
-              id="email"
-              placeholder="Email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}${0,40}"
-            />
-          </div>
+        <!-- ------Search contact by Mobile No: -->
+        <hr />
+        <input
+          type="text"
+          id="mySearchInput"
+          onkeyup="searchFunction()"
+          placeholder="Search for ..."
+        />
 
-          <input
-            type="submit"
-            class="formbtn btn"
-            name="submit"
-            id="submit"
-            value="Add Contact"
-          />
-        </form>
+        <!--Table Showing Registered Users-->
+        <hr />
 
-        <p class="alert"></p>
-        <hr style="margin-top: 20px" />
-      </div>
+        <div class="showEntry">
+          <table
+            class="table"
+            id="myTable"
+            data-toggle="table"
+            data-search="true"
+          >
+            <thead class="filters">
+              <tr>
+                <th data-field="id1" data-sortable="true" onclick="sortTable()">
+                  Name
+                </th>
+                <th data-field="id2">Phone No</th>
+                <th>Email</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="conList">
+              <!-- Sample contacts-->
+              <tr>
+                <td>Admin</td>
+                <td>1234567890</td>
+                <td>test@gmail.com</td>
+              </tr>
 
-      <!-- ------Search contact by Mobile No: -->
-
-      <input
-        type="text"
-        id="mySearchInput"
-        onkeyup="searchFunction()"
-        placeholder="Search for ..."
-      />
-
-      <!--Table Showing Registered Users-->
-      <hr style="margin-top: 15px" />
-      <div class="showEntry">
-        <table
-          class="table"
-          id="myTable"
-          data-toggle="table"
-          data-search="true"
-        >
-          <thead class="filters">
-            <tr>
-              <th data-field="id1" data-sortable="true" onclick="sortTable()">
-                Name
-                <!-- <i class="fa fa-fw fa-sort"></i> -->
-              </th>
-              <th data-field="id2">Phone No</th>
-              <th>Email</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="conList">
-            <!-- Sample contacts-->
-            <tr>
-              <td>Admin</td>
-              <td>1234567890</td>
-              <td>test@test</td>
-              <td class="delete">X</td>
-            </tr>
-
-            <tr>
-              <td>Agrawal</td>
-              <td>3409820092</td>
-              <td>ntmp@gmail.com</td>
-              <td class="delete">X</td>
-            </tr>
-          </tbody>
-        </table>
-        <hr style="margin-top: 20px" />
-      </div>
+              <tr>
+                <td>David</td>
+                <td>3409820092</td>
+                <td>ntmp@gmail.com</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr style="margin-top: 20px" />
+        </div>
+      </main>
     </div>
   </body>
   <script type="text/javascript" src="script.js"></script>
