@@ -72,7 +72,7 @@ if (frm != null) {
 		}
 		else {
 			document.querySelector(".alert").textContent = "Please Fill All The Fields";
-			document.querySelector(".alert").style.background = "red";
+			// document.querySelector(".alert").style.background = "red";
 			setTimeout(clearAlert, 1500);
 		}
 		function clearAlert() {
