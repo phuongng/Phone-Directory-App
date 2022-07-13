@@ -4,17 +4,6 @@ btn.addEventListener('click', function (e) {
 	e.preventDefault();
 	const data = document.querySelector(".showEntry");
 	const entry = document.querySelector(".addEntry");
-
-	// if (e.target.textContent == "Add A New Entry") {
-	// 	e.target.textContent = "Go Back";
-	// 	data.classList.add("hidden");
-	// 	entry.classList.remove("hidden");
-	// }
-	// else {
-	// 	e.target.textContent = "Add A New Entry";
-	// 	data.classList.remove("hidden");
-	// 	entry.classList.add("hidden");
-	// }
 })
 
 //Event Listener For Adding Contacts
@@ -66,17 +55,17 @@ if (frm != null) {
 			document.querySelector(".showEmail").textContent = email.value;
 			//Show Alert
 
-			document.querySelector(".alert").textContent = "Entry Added To Directory";
-			document.querySelector(".alert").style.background = "green";
+			document.querySelector("#error").textContent = "Entry Added To Directory";
+			document.querySelector("#error").style.background = "green";
 			setTimeout(clearAlert, 1500);
 		}
 		else {
-			document.querySelector(".alert").textContent = "Please Fill All The Fields";
+			document.querySelector("#error").textContent = "Invalid Input";
 			// document.querySelector(".alert").style.background = "red";
 			setTimeout(clearAlert, 1500);
 		}
 		function clearAlert() {
-			document.querySelector(".alert").textContent = "";
+			document.querySelector("#error").textContent = "";
 
 		}
 	});
@@ -86,14 +75,14 @@ if (frm != null) {
 
 //Event Listener For Deleting Contacts
 
-if (list != null) {
-	list.addEventListener('click', function (e) {
-		if (e.target.className == "delete") {
-			const el = e.target.parentElement;
-			el.parentElement.removeChild(el);
-		}
-	});
-}
+// if (list != null) {
+// 	list.addEventListener('click', function (e) {
+// 		if (e.target.className == "delete") {
+// 			const el = e.target.parentElement;
+// 			el.parentElement.removeChild(el);
+// 		}
+// 	});
+// }
 
 
 
@@ -132,7 +121,7 @@ function searchFunction() {
 
 	// Loop through all table rows, and hide those who don't match the search query
 	for (i = 0; i < tr.length; i++) {
-		td = tr[i].getElementsByTagName("td")[0];
+		td = tr[i].getElementsByTagName("td")[1];
 		if (td) {
 			txtValue = td.textContent || td.innerText;
 			if (txtValue.toUpperCase().indexOf(filter) > -1) {
