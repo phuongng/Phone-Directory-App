@@ -12,7 +12,7 @@ body {
 
 .container {
   margin: 2rem;
-  padding: 2rem;
+  padding: 2rem 4rem;
   background-color: rgba(40, 40, 40, 0.4);
   height: auto;
   border-radius: 0.5rem;
@@ -23,6 +23,16 @@ hr {
   border: 1px dashed rgba(74, 177, 255, 1);
 }
 
+h1 {
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #2f76c5;
+  height: 5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
 .alert {
   margin-top: 40px;
   margin-left: 50%;
@@ -56,6 +66,7 @@ hr {
   background-color: #2f76c5;
   font-size: 2rem;
   font-weight: 700;
+  font-family: "Arima", cursive;
 }
 
 /* -------.entry-form */
@@ -75,13 +86,14 @@ hr {
 }
 
 input {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   width: 100%;
-  height: 3rem;
+  height: 4rem;
   margin: 1rem 0;
   border: 1px solid #919490;
   border-radius: 0.5rem;
   padding: 1rem;
+  font-family: "Arima", cursive;
 }
 .form-input {
   border: 1px solid #919490;
@@ -95,6 +107,7 @@ input {
   letter-spacing: 2px;
   height: 4rem;
   font-size: 1.5rem;
+  font-family: "Arima", cursive;
 }
 
 .submit-btn:hover {
@@ -111,7 +124,7 @@ input {
 
 .table {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
   color: white;
 }
@@ -121,11 +134,12 @@ input {
   font-size: 2rem;
   font-weight: bold;
   color: white;
+  padding: 0.5rem 0;
 }
 
 .table td {
   outline: 1px solid rgba(74, 177, 255, 0.5);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   padding: 0.5rem 0;
 }
 
